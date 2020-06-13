@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Four1Property.View.Register"
+             Title="Create Account"
+             BackgroundImage="Splashbackground.png">    
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="55"/>
+                
+
+            </Grid.RowDefinitions>
+
+            <Image x:Name="AddPhoto" Source="RegisterProfileImage.png"  Aspect="AspectFit" Grid.Row="0" Scale="0.8" HorizontalOptions="Center" VerticalOptions="Center"  Style="{StaticResource ImageStyle}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Grid Grid.Row="1"  ColumnSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label x:Name="UserName" Grid.Row="0" Text="Email" FontSize="11" TextColor="#FF071D66"/>
+                    <Entry x:Name="Email" Placeholder="Email"  Grid.Row="1"  Style="{StaticResource EntryStyle}" Keyboard="Email"/>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label x:Name="Password" Grid.Row="0" Text="Password" FontSize="11" TextColor="#FF071D66"/>
+                    <Entry x:Name="PasswordEN" Placeholder="Password"  Grid.Row="1"  Style="{StaticResource EntryStyle}" IsPassword="True" Keyboard="Default"/>
+                    <Image x:Name="ShwoHide" Source="ShowPassword2.png" VerticalOptions="Center" HorizontalOptions="End" Grid.Row="1" Scale="0.5">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label x:Name="PhoneNumber" Grid.Row="0" Text="Phone Number" FontSize="11" TextColor="#FF071D66"/>
+                    <Entry x:Name="Number" Placeholder="PhoneNumber"  Grid.Row="1"  Style="{StaticResource EntryStyle}" Keyboard="Telephone"/>
+                </Grid>
+
+            </Grid>
+
+            <Button x:Name="CREATENEWACCOUNT" Text="CREATE NEW ACCOUNT"   Clicked="CREATENEWACCOUNT_Clicked" Grid.Row="3" Style="{StaticResource ButtonStyle}"/>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

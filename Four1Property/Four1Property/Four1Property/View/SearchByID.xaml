@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="View.SearchByID" >
+    
+    <StackLayout Padding="20,20,20,20"
+                 BackgroundColor="#E6A9A9A9"
+                 WidthRequest="300"
+                 HeightRequest="130"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+        <Label x:Name="IDLable" Text="Property ID" HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12"/>
+        <Entry x:Name="IDEntry"  FontSize="12" Placeholder="Enter ID Number" PlaceholderColor="#FF071D66" />
+        <Button x:Name="SearchID" Text="Search" Grid.Row="3" Style="{StaticResource ButtonStyle1}" Clicked="SearchByID_Clicked"/>
+    </StackLayout>
+</pages:PopupPage>

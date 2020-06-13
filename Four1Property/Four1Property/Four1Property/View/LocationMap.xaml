@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="View.LocationMap">
+    <StackLayout Padding="10,10,10,10"
+                 BackgroundColor="#E6A9A9A9"
+                 WidthRequest="350"
+                 HeightRequest="600"
+                 HorizontalOptions="CenterAndExpand"
+                 VerticalOptions="CenterAndExpand">
+        <Grid x:Name="grid" VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" x:Name="UpText" Text="Please Select Location" HorizontalOptions="Center"  TextColor="#FF071D66" FontSize="12"/>
+            <Label></Label>
+            <Grid Grid.Row="1">
+                <maps:Map x:Name="myMap" MapClicked="MyMap_MapClicked"
+                          PinDragEnd="myMap_PinDragEnd"
+                          VerticalOptions="Fill" HorizontalOptions="Fill" />
+            </Grid>
+            <Button Grid.Row="2" x:Name="Select"  HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150"  HeightRequest="40"
+                    Clicked="Select_Clicked"/>
+        </Grid>
+    </StackLayout>
+</pages:PopupPage>

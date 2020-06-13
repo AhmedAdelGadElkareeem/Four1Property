@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+			 xmlns:local="clr-namespace:CustomRenderer"
+             x:Class="Four1Property.View.PropertyProfile"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Share" IconImageSource="share.png" Order="Primary" Activated="ToolbarItem_Activated"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <!--0-->
+                <RowDefinition Height="80"/>
+                <!--1-->
+                <RowDefinition Height="40"/>
+                <!--2-->
+            </Grid.RowDefinitions>
+
+            <ScrollView  Grid.Row="0" x:Name="ProfileView" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <!--0-->
+                        <RowDefinition Height="350"/>
+                        <!--1-->
+                        <RowDefinition Height="250"/>
+                        <RowDefinition Height="60"/>
+                        <!--2-->
+                        <RowDefinition Height="80"/>
+                        <!--3-->
+                        <RowDefinition Height="Auto"/>
+                        <!--4-->
+                        <RowDefinition Height="80"/>
+                        <!--5-->
+                        <RowDefinition Height="Auto"/>
+                        <!--6-->
+                        <RowDefinition Height="15"/>
+                        <!--7-->
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0"  ColumnSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <!--0-->
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <!--0-->
+                            <ColumnDefinition Width="100" />
+                            <!--1-->
+                        </Grid.ColumnDefinitions>
+
+                        <Grid  Grid.Column="0" RowSpacing="0" ColumnSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="2"/>
+                                <RowDefinition Height="*"/>
+                                <!--0-->
+                                <!--1-->
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Row="1" Grid.Column="0" RowSpacing="0" ColumnSpacing="0" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5" />
+                                    <!--0-->
+                                    <ColumnDefinition Width="*" />
+                                    <!--1-->
+                                    <!--2-->
+                                </Grid.ColumnDefinitions>
+                                <BoxView BackgroundColor="DarkBlue" Grid.Column="1" IsVisible="True" />
+                                <Label x:Name="PropertyPrice" Text="{Binding Price}" Grid.Column="1" Style="{StaticResource LabelStyle3}"/>
+                            </Grid>
+                            <Grid Grid.Row="1" Grid.Column="1" RowSpacing="0" ColumnSpacing="0" >
+                                <Grid.ColumnDefinitions>
+                                    <!--0-->
+                                    <ColumnDefinition Width="*" />
+                                    <!--1-->
+                                    <!--2-->
+                                </Grid.ColumnDefinitions>
+                                <BoxView x:Name="PropertyStatusColor" BackgroundColor="{Binding Color}" Grid.Column="0" IsVisible="True" />
+                                <Label x:Name="PropertyStatus" Text="{Binding StatusLang}"  Grid.Column="0" Style="{StaticResource LabelStyle3}"  />
+                            </Grid>
+                        </Grid>
+
+                        <Grid Grid.Column="1" RowSpacing="0" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="15"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="1" x:Name="PropertyTitle" Text="{Binding Title}" Style="{StaticResource LabelStyle2}" FontSize="14" HorizontalOptions="Start" VerticalOptions="Center"/>
+                            <Label Grid.Row="1" Grid.Column="1" x:Name="PropertyAddress" Text="{Binding AddressLAng}" Style="{StaticResource LabelStyle2}" FontSize="12" TextColor="#868e96"  HorizontalOptions="Start" VerticalOptions="Fill"/>
+                        </Grid>
+
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <controls:CarouselViewControl  x:Name="listView" 
+                          AbsoluteLayout.LayoutFlags="All"
+                          HorizontalOptions="Fill"
+                          VerticalOptions="Fill" 
+                                                       IndicatorsTintColor ="DarkGray"
+                                                      CurrentPageIndicatorTintColor="#071d66"
+                                                      IndicatorsShape="Circle"
+                                                      ShowIndicators="True"
+                           ShowArrows="True"
+                                                       ArrowsBackgroundColor="#071d66"
+                          ItemsSource="{Binding AllPhotos}">
+                            <controls:CarouselViewControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Image  x:Name="PropertyImage"  Aspect="Fill" Source="{Binding UploadedTo}">
+                                    </Image>
+                                </DataTemplate>
+                            </controls:CarouselViewControl.ItemTemplate>
+                        </controls:CarouselViewControl>
+                        <!--<Grid  VerticalOptions="CenterAndExpand" HorizontalOptions="Start" BackgroundColor="Transparent" WidthRequest="60">
+                            <Image Source="{Binding LeftArrow}" Scale="0.6"  IsVisible="{Binding ArrowPhoto}"/>
+                        </Grid>
+                        <Grid  VerticalOptions="CenterAndExpand" HorizontalOptions="End" BackgroundColor="Transparent" WidthRequest="60">
+                            <Image Source="{Binding RightArrow}" Scale="0.6" IsVisible="{Binding ArrowPhoto}"/>
+                        </Grid>-->
+                    </Grid>
+                    <Grid Grid.Row="2" RowSpacing="5" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="60"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="15"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="1" x:Name="PropertyLocation" Style="{StaticResource LabelStyle2}" FontSize="18" HorizontalOptions="Fill" VerticalOptions="Start"/>
+                        </Grid>
+                        <local:CustomMap WidthRequest="250" HeightRequest="250" Grid.Row="1"
+                        x:Name="MyMap"
+                       IsShowingUser="true"
+                       MapType="Street" />
+                        <Grid Grid.Row="2" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="10"/>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="StreetView"  Grid.Column="1" Style="{StaticResource ButtonStyle1}" Clicked="StreetView_Clicked"/>
+                            <Button x:Name="GetDirection"  Grid.Column="2" Style="{StaticResource ButtonStyle1}" Clicked="GetDirection_Clicked"/>
+                        </Grid>
+                    </Grid>
+                    <Grid  Grid.Row="3" BackgroundColor="Transparent" RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="10"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="1" Source="ad.png" IsVisible="True" Aspect="Fill">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+
+                    <Image x:Name="PropertyDetails" Source="PropertyDetails.png"  Grid.Row="6" IsVisible="True" Aspect="Fill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Details"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Grid Grid.Row="7" IsVisible="False" x:Name="DetalisArea" RowSpacing="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="15"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="1" x:Name="CarSpacesText" Text="Car Spaces" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Start" VerticalOptions="Center" />
+                        <Label Grid.Row="1" Grid.Column="1" x:Name="ElevatorText" Text="Elevator" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Start" VerticalOptions="Center" />
+                        <Label Grid.Row="2" Grid.Column="1" x:Name="BalconyText" Text="Balcony" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Start" VerticalOptions="Center" />
+                        <Label Grid.Row="3" Grid.Column="1" x:Name="GardenText" Text="Garden" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Start" VerticalOptions="Center" />
+                        <Label Grid.Row="4" Grid.Column="1" x:Name="DryCleantext" Text="Dry Clean room" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Start" VerticalOptions="Center" />
+                        <Label Grid.Row="5" Grid.Column="1" x:Name="MaidsRoomText" Text="Maids Room" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Start" VerticalOptions="Center"/>
+                        <Label Grid.Row="6" Grid.Column="1" x:Name="StorageRoomText" Text="Storage Room" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Start" VerticalOptions="Center"/>
+                        <Label Grid.Row="7" Grid.Column="1" x:Name="FurnishedText" Text="Fully Furnished" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Start" VerticalOptions="Center"/>
+                        <Label Grid.Row="8" Grid.Column="1" x:Name="AirConText" Text="Air Condition" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Start" VerticalOptions="Center"/>
+                        <Label Grid.Row="9" Grid.Column="1" x:Name="GymText" Text="Gym" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Start" VerticalOptions="Center"/>
+                        <Label Grid.Row="10" Grid.Column="1" x:Name="PoolText" Text="Pool" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Start" VerticalOptions="Center"/>
+                        <Label Grid.Row="11" Grid.Column="1" x:Name="BuiltinKitchenText" Text="Built in Kitchen" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+                        <Image Grid.Row="0" x:Name="CarSpaces" Grid.Column="2" Scale="0.3" HorizontalOptions="Center" VerticalOptions="Start" IsVisible="True" />
+                        <Image Grid.Row="1" x:Name="Elevator" Grid.Column="2" Scale="0.3" HorizontalOptions="Center" VerticalOptions="Start" IsVisible="True" />
+                        <Image Grid.Row="2" x:Name="Balcony" Grid.Column="2" Scale="0.3" HorizontalOptions="Center" VerticalOptions="Start" IsVisible="True"/>
+                        <Image Grid.Row="3" x:Name="Garden" Grid.Column="2" Scale="0.3" HorizontalOptions="Center" VerticalOptions="Start" IsVisible="True" />
+                        <Image Grid.Row="4" x:Name="DryClean" Grid.Column="2" Scale="0.3" HorizontalOptions="Center" VerticalOptions="Start" IsVisible="True" />
+                        <Image Grid.Row="5" x:Name="Maids" Grid.Column="2" Scale="0.3" HorizontalOptions="Center" VerticalOptions="Start"  IsVisible="True"/>
+                        <Image Grid.Row="6" x:Name="Storage" Grid.Column="2" Scale="0.3" HorizontalOptions="Center" VerticalOptions="Start" IsVisible="True"/>
+                        <Image Grid.Row="7" x:Name="FullyFur" Grid.Column="2" Scale="0.3" HorizontalOptions="Center" VerticalOptions="Start" IsVisible="True"/>
+                        <Image Grid.Row="8" x:Name="AirCon" Grid.Column="2" Scale="0.3" HorizontalOptions="Center" VerticalOptions="Start" IsVisible="True"/>
+                        <Image Grid.Row="9" x:Name="Gym" Grid.Column="2" Scale="0.3" HorizontalOptions="Center" VerticalOptions="Start" IsVisible="True"/>
+                        <Image Grid.Row="10" x:Name="Pool" Grid.Column="2" Scale="0.3" HorizontalOptions="Center" VerticalOptions="Start" IsVisible="True"/>
+                        <Image Grid.Row="11" x:Name="BinKitchen" Grid.Column="2" Scale="0.3" HorizontalOptions="Center" VerticalOptions="Start" IsVisible="True"/>
+
+                    </Grid>
+
+                    <Image x:Name="PropertyInformation" Source="PropertyInformation.png"  Grid.Row="4" IsVisible="True" Aspect="Fill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Information"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Grid Grid.Row="5" IsVisible="False" x:Name="InfoArea" RowSpacing="30">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="15"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="1" x:Name="PropertyTypeText" Text="Property Type" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+                        <Label Grid.Row="1" Grid.Column="1" x:Name="PriceText" Text="Price" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+                        <Label Grid.Row="2" Grid.Column="1" x:Name="LandareaText" Text="Status" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+                        <Label Grid.Row="3" Grid.Column="1" x:Name="BuildAreaText" Text="Build Area" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+                        <Label Grid.Row="4" Grid.Column="1" x:Name="BuildDateText" Text="Build Date" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+                        <Label Grid.Row="5" Grid.Column="1" x:Name="FloorText" Text="Floor" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+                        <Label Grid.Row="6" Grid.Column="1" x:Name="RoomsText" Text="Rooms" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+                        <Label Grid.Row="7" Grid.Column="1" x:Name="BedRoomsText" Text="Bedrooms" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+                        <Label Grid.Row="8" Grid.Column="1" x:Name="BathroomsText" Text="Bathrooms" Style="{StaticResource LabelStyle4}" FontSize="12" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+
+                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding TypeLang}" Style="{StaticResource LabelStyle5}" FontSize="12" HorizontalOptions="Center" VerticalOptions="Fill"/>
+                        <Label Grid.Row="1" Grid.Column="2" Text="{Binding Price}" Style="{StaticResource LabelStyle5}" TextColor="{Binding Color}" FontSize="12" HorizontalOptions="Center" VerticalOptions="Fill"/>
+                        <Label Grid.Row="2" Grid.Column="2" Text="{Binding LandArea}" Style="{StaticResource LabelStyle5}" FontSize="12" HorizontalOptions="Center" VerticalOptions="Fill"/>
+                        <Label Grid.Row="3" Grid.Column="2" Text="{Binding BuildingArea}" Style="{StaticResource LabelStyle5}" FontSize="12" HorizontalOptions="Center" VerticalOptions="Fill"/>
+                        <Label Grid.Row="4" Grid.Column="2" Text="{Binding Build}" Style="{StaticResource LabelStyle5}" FontSize="12" HorizontalOptions="Center" VerticalOptions="Fill"/>
+                        <Label Grid.Row="5" Grid.Column="2" Text="{Binding FloorNo}" Style="{StaticResource LabelStyle5}" FontSize="12" HorizontalOptions="Center" VerticalOptions="Fill"/>
+                        <Label Grid.Row="6" Grid.Column="2" Text="{Binding LivingRooms}" Style="{StaticResource LabelStyle5}" FontSize="12" HorizontalOptions="Center" VerticalOptions="Fill"/>
+                        <Label Grid.Row="7" Grid.Column="2" Text="{Binding Beds}" Style="{StaticResource LabelStyle5}" FontSize="12" HorizontalOptions="Center" VerticalOptions="Fill"/>
+                        <Label Grid.Row="8" Grid.Column="2" Text="{Binding Baths}" Style="{StaticResource LabelStyle5}" FontSize="12" HorizontalOptions="Center" VerticalOptions="Fill"/>
+                    </Grid>
+
+                </Grid>
+            </ScrollView>
+
+            <Grid Grid.Row="1" BackgroundColor="#071d66">
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="12" />
+                    <!--0-->
+                    <ColumnDefinition Width="*" />
+                    <!--1-->
+                    <ColumnDefinition Width=".4*" />
+                    <!--2-->
+                    <ColumnDefinition Width=".4*" />
+                    <ColumnDefinition Width=".4*" />
+                    <!--3-->
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="60"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="AgentP" Source="AgentP" Grid.Column="0" Scale="0.4" IsVisible="True" HorizontalOptions="Start"/>
+                    <Label x:Name="AgentName"  Grid.Column="1" FontSize="10" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Grid>
+
+                <Image x:Name="Email" Source="EmailProp.png" Grid.Column="2" Scale=".5" IsVisible="True" HorizontalOptions="End">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Email_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="Phone" Source="PhoneProp.png" Grid.Column="3" Scale=".5" IsVisible="True" HorizontalOptions="End">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Phone_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="Whatsapp" Source="whatsapp.jpg" Grid.Column="4" Scale=".5" IsVisible="True" HorizontalOptions="End">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Whatsapp_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+            <Grid Grid.Row="2" ColumnSpacing="12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="12" />
+                    <!--0-->
+                    <ColumnDefinition Width="*" />
+                    <!--1-->
+                    <ColumnDefinition Width="*" />
+                    <!--2-->
+                    <ColumnDefinition Width="*" />
+                    <!--3-->
+                    <ColumnDefinition Width="*" />
+                    <!--4-->
+                    <ColumnDefinition Width="12" />
+                    <!--5-->
+                </Grid.ColumnDefinitions>
+                <Image x:Name="HomeButton" Source="home2.png" Grid.Column="1" Scale=".7" IsVisible="True" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHomeButtonClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="HomeButtonBlue" Source="home1.png" Grid.Column="1" Scale=".7" IsVisible="False" />
+
+
+
+                <Image x:Name="SearchButton" Source="search1.png" Grid.Column="2" Scale=".7"  IsVisible="True" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSearchButtonClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="SearchButtonBlue" Source="search2.png" Grid.Column="2" Scale=".7" IsVisible="False"/>
+
+
+                <Image x:Name="FavoriteButton" Source="wishlist1.png" Grid.Column="3" Scale=".7"  IsVisible="True" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnFavoriteButtonClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="FavoriteButtonBlue" Source="wishlist2.png" Grid.Column="3" Scale=".7" IsVisible="False"/>
+
+
+                <Image x:Name="ProfileButton" Source="profile1.png" Grid.Column="4" Scale=".7"  IsVisible="True" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnProfileButtonClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="ProfileButtonBlue" Source="profile2.png" Grid.Column="4" Scale=".7" IsVisible="False" />
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

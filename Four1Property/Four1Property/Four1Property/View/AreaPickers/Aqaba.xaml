@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                          xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+
+             x:Class="View.Aqaba">
+    <StackLayout Padding="20,20,20,20"
+                 BackgroundColor="#E6A9A9A9"
+                 WidthRequest="300"
+                 HeightRequest="350"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+        <Label x:Name="UpText" Text="Please Select City" HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12"/>
+
+        <ScrollView x:Name="AlAqabahArea" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" x:Name="Diesah" Text=" Diesah " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Diesah_Clicked"/>
+                <Button Grid.Row="1" x:Name="AqabaArea" Text=" Aqaba " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Aqaba_Clicked"/>
+                <Button Grid.Row="2" x:Name="Asaleah" Text=" Asaleah " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Asaleah_Clicked"/>
+                <Button Grid.Row="3" x:Name="Ghal" Text=" Ghal " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Ghal_Clicked"/>
+                <Button Grid.Row="4" x:Name="Hmaimieh" Text=" Hmaimieh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Hmaimieh_Clicked"/>
+                <Button Grid.Row="5" x:Name="HmaimiehJadiedeh" Text=" Hmaimieh Jadiedeh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="HmaimiehJadiedeh_Clicked"/>
+                <Button Grid.Row="6" x:Name="Kaldi" Text=" Kaldi " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Kaldi_Clicked"/>
+                <Button Grid.Row="7" x:Name="Mezfer" Text=" Mezfer " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Mezfer_Clicked"/>
+                <Button Grid.Row="8" x:Name="Quairah" Text=" Quairah " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Quairah_Clicked"/>
+                <Button Grid.Row="9" x:Name="Reisheh" Text=" Reisheh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Reisheh_Clicked"/>
+                <Button Grid.Row="10" x:Name="Rashdyah" Text=" Rashdyah " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Rashdyah_Clicked"/>
+                <Button Grid.Row="11" x:Name="Shakriyyeh" Text=" Shakriyyeh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Shakriyyeh_Clicked"/>
+                <Button Grid.Row="12" x:Name="Sallheiah" Text=" Sallheiah " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Sallheiah_Clicked"/>
+                <Button Grid.Row="13" x:Name="Taweel" Text=" Taweel " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Taweel_Clicked"/>
+                <Button Grid.Row="14" x:Name="Twaiseh" Text=" Twaiseh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Twaiseh_Clicked"/>
+                <Button Grid.Row="15" x:Name="BadouAbuKhushibeh" Text=" Badou Abu Khushibeh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="BadouAbuKhushibeh_Clicked"/>
+                <Button Grid.Row="16" x:Name="BeirMathkoor" Text=" Beir Mathkoor " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="BeirMathkoor_Clicked"/>
+                <Button Grid.Row="17" x:Name="DabbetHanoot" Text=" Dabbet Hanoot " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="DabbetHanoot_Clicked"/>
+                <Button Grid.Row="18" x:Name="Fienan" Text=" Fienan " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Fienan_Clicked"/>
+                <Button Grid.Row="19" x:Name="MujamaAlShahenat" Text=" Mujam'a Al-Shahenat " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="MujamaAlShahenat_Clicked"/>
+                <Button Grid.Row="20" x:Name="Mnaishier" Text=" Mnaishier " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Mnaishier_Clicked"/>
+                <Button Grid.Row="21" x:Name="Qatar" Text=" Qatar " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Qatar_Clicked"/>
+                <Button Grid.Row="22" x:Name="Qraiqreh" Text=" Qraiqreh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Qraiqreh_Clicked"/>
+                <Button Grid.Row="23" x:Name="Rahmah" Text=" Rahmah " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Rahmah_Clicked"/>
+                <Button Grid.Row="24" x:Name="Ramm" Text=" Ramm " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Ramm_Clicked"/>
+                <Button Grid.Row="25" x:Name="ReaSaadeh" Text=" Re'a Sa'adeh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="ReaSaadeh_Clicked"/>
+                <Button Grid.Row="26" x:Name="Tutun" Text=" Tutun " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Tutun_Clicked"/>
+                <Button Grid.Row="27" x:Name="UmmElBsateen" Text=" Umm El-Bsateen " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="UmmElBsateen_Clicked"/>
+
+
+            </Grid>
+        </ScrollView>
+        <!-- ****************************** -->
+
+
+    </StackLayout>
+
+</pages:PopupPage>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Four1Property.View.AcquaintanceList"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:ffsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             BackgroundColor="#dedede">
+
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+
+            <Grid.RowDefinitions >
+                <RowDefinition >
+                    <RowDefinition.Height>
+                        <OnPlatform  iOS="0" Android="0" />
+                    </RowDefinition.Height>
+                </RowDefinition>
+                <!--1-->
+                <RowDefinition >
+                    <RowDefinition.Height >
+                        <OnPlatform iOS="5" Android="5" />
+                    </RowDefinition.Height>
+                </RowDefinition>
+                <!--2-->
+                <RowDefinition >
+                    <RowDefinition.Height>
+                        <OnPlatform  iOS="*" Android="*" />
+                    </RowDefinition.Height>
+                </RowDefinition>
+                <RowDefinition >
+                    <RowDefinition.Height>
+                        <OnPlatform  iOS="5" Android="5" />
+                    </RowDefinition.Height>
+                </RowDefinition>
+                <!--3-->
+                <RowDefinition >
+                    <RowDefinition.Height>
+                        <OnPlatform  iOS="40" Android="40" />
+                    </RowDefinition.Height>
+                </RowDefinition>
+                <!--4-->
+            </Grid.RowDefinitions>
+            <ScrollView Grid.Row="2" x:Name="Scrolllay" Scrolled="ScrollView_Scrolled">
+            <StackLayout  VerticalOptions="FillAndExpand" x:Name="ListLayout">
+                <Label x:Name="NoProperty" TextColor="Black" FontSize="Medium" IsVisible="False" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout></ScrollView>
+            <Grid Grid.Row="4" ColumnSpacing="12" BackgroundColor="WhiteSmoke">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="12" />
+                    <!--0-->
+                    <ColumnDefinition Width="*" />
+                    <!--1-->
+                    <ColumnDefinition Width="*" />
+                    <!--2-->
+                    <ColumnDefinition Width="*" />
+                    <!--3-->
+                    <ColumnDefinition Width="*" />
+                    <!--4-->
+                    <ColumnDefinition Width="12" />
+                    <!--5-->
+                </Grid.ColumnDefinitions>
+
+
+                <Image x:Name="HomeButton" Source="home2.png" Grid.Column="1" Scale=".7" IsVisible="True" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHomeButtonClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="HomeButtonBlue" Source="home1.png" Grid.Column="1" Scale=".7" IsVisible="False" />
+
+
+
+                <Image x:Name="SearchButton" Source="search1.png" Grid.Column="2" Scale=".7"  IsVisible="True" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSearchButtonClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="SearchButtonBlue" Source="search2.png" Grid.Column="2" Scale=".7" IsVisible="False"/>
+
+
+                <Image x:Name="FavoriteButton" Source="wishlist1.png" Grid.Column="3" Scale=".7"  IsVisible="True" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnFavoriteButtonClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="FavoriteButtonBlue" Source="wishlist2.png" Grid.Column="3" Scale=".7" IsVisible="False"/>
+
+
+                <Image x:Name="ProfileButton" Source="profile1.png" Grid.Column="4" Scale=".7"  IsVisible="True" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnProfileButtonClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="ProfileButtonBlue" Source="profile2.png" Grid.Column="4" Scale=".7" IsVisible="False" />
+
+
+
+            </Grid>
+
+
+        </Grid>
+
+    </ContentPage.Content>
+
+</ContentPage>

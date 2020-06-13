@@ -1,0 +1,851 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Four1Property.View.Home"
+             xmlns:range="clr-namespace:Xamarin.RangeSlider.Forms;assembly=Xamarin.RangeSlider.Forms"
+             BackgroundImage="HomeBackground.png"
+             >
+   
+    <ContentPage.Content>
+
+        <Grid RowSpacing="5" ColumnSpacing="0">
+            <Grid.RowDefinitions >
+                <!--0-->
+                <RowDefinition Height="0.5*"/>
+
+                <!--1-->
+                <RowDefinition Height="0.3*"/>
+
+                <!--2-->
+                <RowDefinition Height="*"/>
+
+                <!--3-->
+                <RowDefinition Height="50"/>
+
+                <!--4-->
+                <RowDefinition Height="40"/>
+
+
+
+            </Grid.RowDefinitions>
+
+            <!--Start Back Arrow -->
+            <Grid x:Name="ArrowEnglish" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="Start" IsVisible="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Image x:Name="mainback" Source="BackArrow.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="backmain_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+            <!-- End Back Arrow -->
+
+            <!--Start Back Arrow Arabic -->
+            <Grid x:Name="ArrowArabic" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End" IsVisible="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Image x:Name="Arabicback" Source="BackArrow.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="backmain_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+            <!-- End Back Arrow Arabic-->
+
+            <!--<Grid x:Name="MenuEn" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End" IsVisible="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Image x:Name="Menu" Source="menu.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Start" Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Menu_Activated"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>-->
+            <!--Start Rent OR Sale  -->
+            <Grid Grid.Row="1" ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="11" />
+                    <!--0-->
+                    <ColumnDefinition Width="*" />
+                    <!--1-->
+                    <ColumnDefinition Width="*" />
+                    <!--2-->
+                    <ColumnDefinition Width="11" />
+                    <!--3-->
+                </Grid.ColumnDefinitions>
+
+                <BoxView BackgroundColor="Green" Grid.Column="1" IsVisible="False"/>
+                <BoxView BackgroundColor="Green" Grid.Column="2" IsVisible="False"/>
+
+                <Image x:Name="Sale" Source="Choose1.png" Grid.Column="1"  HorizontalOptions="EndAndExpand" IsVisible="True" VerticalOptions="StartAndExpand"  >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSaleClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="SaleBlue" Source="Choose11.png" Grid.Column="1"  HorizontalOptions="EndAndExpand"  VerticalOptions="StartAndExpand" IsVisible="False" />
+
+                <Image x:Name="Rent" Source="Choose2.png" Grid.Column="2"  HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" IsVisible="True"  >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnRentClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="RentBlue" Source="Choose22.png" Grid.Column="2"  HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" IsVisible="False"  />
+
+            </Grid>
+            <!--End Rent OR Sale  -->
+
+            <!--Start Main Cat -->
+            <Grid Grid.Row="2" x:Name="maincategory">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="1" >
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="0.4*"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="0.4*"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="0.4*"/>
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                        <Button x:Name="CurrentLocation"  BackgroundColor="White" FontSize="11" Clicked="CurrentLocation_Clicked" TextColor="#FF071D66" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2"/>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center">
+                        <Label x:Name="OROne" Text="OR" FontSize="11" TextColor="#FF071D66"/>
+                    </Grid>
+                    <Grid x:Name="LocationPicker" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="CountryPicker"  Style="{StaticResource HomeButtonStyle}" Clicked="CountryPicker_Clicked" Grid.Column="0" FontSize="11" BackgroundColor="White" TextColor="#FF071D66" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2"/>
+                        <Button x:Name="CityPicker" Style="{StaticResource HomeButtonStyle}" Clicked="CityPicker_Clicked" Grid.Column="1" FontSize="11"  BackgroundColor="White" TextColor="#FF071D66" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2" IsEnabled="False"/>
+                        <Button x:Name="AreaPicker" Style="{StaticResource HomeButtonStyle}" Clicked="AreaPicker_Clicked" Grid.Column="2" FontSize="11"  BackgroundColor="White" TextColor="#FF071D66" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2" IsEnabled="False"/>
+                    </Grid>
+                    <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center">
+                        <Label x:Name="ORTwo"  Text="OR" FontSize="11" TextColor="#FF071D66"/>
+                    </Grid>
+                    <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
+                        <Button x:Name="MapView" Text="MapView" BackgroundColor="White" FontSize="11" Clicked="MapView_Clicked" TextColor="#FF071D66" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2"/>
+                    </Grid>
+                    <Label Grid.Row="3" />
+                </Grid>
+            </Grid>
+            <!--End Main Cat -->
+
+            <!--Start Main Button -->
+            <Grid x:Name="MainButtons" Grid.Row="2" ColumnSpacing="4"  RowSpacing="4" IsVisible="False">
+                <Grid.ColumnDefinitions>
+                    <!--0-->
+                    <ColumnDefinition Width="15" />
+                    <ColumnDefinition Width="*" />
+                    <!--1-->
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="15" />
+                    <!--2-->
+                    <!--3-->
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="0"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="120"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="CommercialMain" Style="{StaticResource HomeButtonStyle}" BackgroundColor="White" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2" FontSize="11" Text="         Commercial" TextColor="#FF071D66" Grid.Column="0" Grid.ColumnSpan="3" Clicked="CommercialMain_Clicked" />
+                    <Image x:Name="CommercialMainImage" Source="commercial.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="IndustrialMain" Style="{StaticResource HomeButtonStyle}"  BackgroundColor="White"  BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2" FontSize="11" Text="         Industrial" TextColor="#FF071D66"  Grid.Column="0" Grid.ColumnSpan="3" Clicked="IndustrialMain_Clicked" />
+                    <Image x:Name="IndustrialMainImage" Source="industrial.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="ResidentialMain" Style="{StaticResource HomeButtonStyle}" BackgroundColor="White"  BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2" FontSize="11" Text="           Residential" TextColor="#FF071D66" Grid.Column="0" Grid.ColumnSpan="3" Clicked="ResidentialMain_Clicked" />
+                    <Image x:Name="ResidentialMainImage" Source="residential.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="LandMain" Style="{StaticResource HomeButtonStyle}" BackgroundColor="White"  BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2" FontSize="11" Text="Land" TextColor="#FF071D66" Grid.Column="0" Grid.ColumnSpan="3" Clicked="LandMain_Clicked" />
+                    <Image x:Name="AgreculturMainImage" Source="land.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+            </Grid>
+            <!--End Main Button -->
+
+            <!--residential grid-->
+            <Grid x:Name="resideintialcat" Grid.Row="2" ColumnSpacing="4" RowSpacing="4" IsVisible="False">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <!--0-->
+                    <ColumnDefinition Width="*" />
+                    <!--1-->
+                    <ColumnDefinition Width="*" />
+                    <!--2-->
+                    <ColumnDefinition Width="10" />
+                    <!--3-->
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="8"/>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.2*"/>
+
+                    <!--1-->
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="HouseButton"  BackgroundColor="White" BorderRadius="7" Style="{StaticResource HomeButtonStyle}" BorderColor="#FF071D66" BorderWidth="2" FontSize="11" TextColor="#FF071D66"  Grid.Column="0" Grid.ColumnSpan="3" Clicked="HouseButton_Clicked" />
+                    <Image x:Name="HosueImage"  Source="House.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="FlatButton"  BackgroundColor="White" Style="{StaticResource HomeButtonStyle}"  BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2" FontSize="11" TextColor="#FF071D66"  Grid.Column="0" Grid.ColumnSpan="3" Clicked="FlatButton_Clicked"/>
+                    <Image x:Name="FlatImage" Source="flat.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="ApartmentButton" BackgroundColor="White" Style="{StaticResource HomeButtonStyle}" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2" FontSize="11" TextColor="#FF071D66" Grid.Column="0" Grid.ColumnSpan="3" Clicked="ApartmentButton_Clicked" />
+                    <Image x:Name="ApartmentImage" Source="apartment.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="BuildingButton" BackgroundColor="White" FontSize="11" Style="{StaticResource HomeButtonStyle}" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2" TextColor="#FF071D66" Grid.Column="0" Grid.ColumnSpan="3" Clicked="BuildingButton_Clicked"/>
+                    <Image x:Name="BuildingImage" Source="Building.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+
+                <Grid Grid.Row="3" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="FurnishedButton" BackgroundColor="White"  BorderRadius="7" Style="{StaticResource HomeButtonStyle}" BorderColor="#FF071D66" BorderWidth="2" FontSize="11" TextColor="#FF071D66" Grid.Column="0" Grid.ColumnSpan="3" Clicked="FurnishedButton_Clicked"/>
+                    <Image x:Name="FienishedImage" Source="firnished.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8" IsVisible="True"/>
+                    <Image x:Name="FienishedWImage" Source="firnishedWhite.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8" IsVisible="False"/>
+                </Grid>
+
+                <Grid Grid.Row="3" Grid.Column="2" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="UnFernishedButton"  BackgroundColor="White" Style="{StaticResource HomeButtonStyle}"  BorderRadius="7" BorderColor="#FF071D66" FontSize="11" BorderWidth="2"  TextColor="#FF071D66" Grid.Column="0" Grid.ColumnSpan="3"  Clicked="UnFernishedButton_Clicked"/>
+                    <Image x:Name="UnFirnishedImage" Source="unfirnished.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+
+                <Grid Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="Bed" Grid.Column="0" FontSize="11" VerticalOptions="Center" TextColor="#FF071D66"/>
+                    <Grid Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" FontSize="11" VerticalOptions="Center" TextColor="#FF071D66" Text="1"/>
+                        <Image x:Name="bed1u" Source="radio.png"  BackgroundColor="Transparent" Scale="0.6"  Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="bed1unchecked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="bed1c" Source="radioc.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit" IsVisible="False">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="bed1checked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" FontSize="11" VerticalOptions="Center" TextColor="#FF071D66" Text="2"/>
+                        <Image x:Name="bed2u" Source="radio.png"  BackgroundColor="Transparent" Scale="0.6"  Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="bed2unchecked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="bed2c" Source="radioc.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit" IsVisible="False">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="bed2checked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid Grid.Column="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" FontSize="11" VerticalOptions="Center" TextColor="#FF071D66" Text="3"/>
+                        <Image x:Name="bed3u" Source="radio.png"  BackgroundColor="Transparent" Scale="0.6"  Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="bed3unchecked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="bed3c" Source="radioc.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit" IsVisible="False">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="bed3checked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid Grid.Column="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="15"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" FontSize="11" VerticalOptions="Center" TextColor="#FF071D66" Text="+4"/>
+                        <Image x:Name="bed4u" Source="radio.png"  BackgroundColor="Transparent" Scale="0.6"  Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="bed4unchecked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="bed4c" Source="radioc.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit" IsVisible="False">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="bed4checked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+
+                </Grid>
+                <Grid Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="Bath" Grid.Column="0" FontSize="11" VerticalOptions="Center" TextColor="#FF071D66"/>
+                    <Grid Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" FontSize="11" VerticalOptions="Center" TextColor="#FF071D66" Text="1"/>
+                        <Image x:Name="bath1u" Source="radio.png"  BackgroundColor="Transparent" Scale="0.6"  Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="bath1unchecked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="bath1c" Source="radioc.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit" IsVisible="False">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="bath1checked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" FontSize="11" VerticalOptions="Center" TextColor="#FF071D66" Text="2"/>
+                        <Image x:Name="bath2u" Source="radio.png"  BackgroundColor="Transparent" Scale="0.6"  Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="bath2unchecked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="bath2c" Source="radioc.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit" IsVisible="False">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="bath2checked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid Grid.Column="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" FontSize="11" VerticalOptions="Center" TextColor="#FF071D66" Text="3"/>
+                        <Image x:Name="bath3u" Source="radio.png"  BackgroundColor="Transparent" Scale="0.6"  Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="bath3unchecked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="bath3c" Source="radioc.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit" IsVisible="False">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="bath3checked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid Grid.Column="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="15"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" FontSize="11" VerticalOptions="Center" TextColor="#FF071D66" Text="+4"/>
+                        <Image x:Name="bath4u" Source="radio.png"  BackgroundColor="Transparent" Scale="0.6"  Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="bath4unchecked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="bath4c" Source="radioc.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit" IsVisible="False">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="bath4checked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="15"/>
+                    </Grid.ColumnDefinitions>
+                    <range:RangeSlider x:Name="ResidentialSlider" MinimumHeightRequest="80" HeightRequest="80" TextSize="8" MinimumValue="0" MaximumValue="1000000" LowerValue="0" UpperValue="1000000" ShowTextAboveThumbs="True" ActiveColor="#FF071D66"  StepValue="20" Grid.Column="1"  BarHeight="15" VerticalOptions="Start" HorizontalOptions="Center" TextColor="#FF071D66"/>
+
+                </Grid>
+            </Grid>
+            <!--end ofresidential grid-->
+
+            <!--start of commercial grid-->
+            <Grid x:Name="commercialcat" Grid.Row="2" ColumnSpacing="4" RowSpacing="4" IsVisible="False">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <!--0-->
+                    <ColumnDefinition Width="*" />
+                    <!--1-->
+                    <ColumnDefinition Width="*" />
+                    <!--2-->
+                    <ColumnDefinition Width="10" />
+                    <!--3-->
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.2*"/>
+
+                    <!--1-->
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="ShowRoomButton" BackgroundColor="White" BorderRadius="7" Style="{StaticResource HomeButtonStyle}" BorderColor="#FF071D66" BorderWidth="2" FontSize="11" TextColor="#FF071D66" Grid.Column="0" Grid.ColumnSpan="3" Clicked="ShowRoomButton_Clicked" />
+                    <Image x:Name="ShowRoomImage" Source="showroom.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="OfficeButton"  BackgroundColor="White"  BorderRadius="7" Style="{StaticResource HomeButtonStyle}" BorderColor="#FF071D66" BorderWidth="2" FontSize="11"  TextColor="#FF071D66"  Grid.Column="0" Grid.ColumnSpan="3" Clicked="OfficeButton_Clicked"/>
+                    <Image x:Name="OfficeImage" Source="office.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="ShopsButton" BackgroundColor="White"  BorderRadius="7" Style="{StaticResource HomeButtonStyle}" BorderColor="#FF071D66" BorderWidth="2" FontSize="11"  TextColor="#FF071D66" Grid.Column="0" Grid.ColumnSpan="3" Clicked="ShopsButton_Clicked" />
+                    <Image x:Name="ShopsImage" Source="shop.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="BuildingComButton" BackgroundColor="White" BorderRadius="7" Style="{StaticResource HomeButtonStyle}" BorderColor="#FF071D66" BorderWidth="2" FontSize="11"  TextColor="#FF071D66" Grid.Column="0" Grid.ColumnSpan="3" Clicked="BuildingComButton_Clicked"/>
+                    <Image x:Name="BuildingComImage" Source="Building.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+
+                <Grid Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="15"/>
+                    </Grid.ColumnDefinitions>
+                    <range:RangeSlider x:Name="CommercialSlider" TextSize="10" MinimumValue="0" MaximumValue="1000000" LowerValue="0" UpperValue="1000000" ShowTextAboveThumbs="True" ActiveColor="#FF071D66"  StepValue="20" Grid.Column="1"  BarHeight="15" VerticalOptions="Start" HorizontalOptions="Center" TextColor="#FF071D66"/>
+
+                </Grid>
+            </Grid>
+            <!--end of commercial grid-->
+
+            <!--start of land grid-->
+            <Grid x:Name="landcat" Grid.Row="2" ColumnSpacing="4" RowSpacing="4" IsVisible="False">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <!--0-->
+                    <ColumnDefinition Width="*" />
+                    <!--1-->
+                    <ColumnDefinition Width="*" />
+                    <!--2-->
+                    <ColumnDefinition Width="10" />
+                    <!--3-->
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.2*"/>
+
+                    <!--1-->
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="CommercialButton" BackgroundColor="White" BorderRadius="7" Style="{StaticResource HomeButtonStyle}" BorderColor="#FF071D66" BorderWidth="2" FontSize="11" TextColor="#FF071D66" Grid.Column="0" Grid.ColumnSpan="3" Clicked="CommercialButton_Clicked" />
+                    <Image x:Name="CommercialImage" Source="commercial.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="IndustrialButton"  BackgroundColor="White" Style="{StaticResource HomeButtonStyle}" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2" FontSize="11" TextColor="#FF071D66"  Grid.Column="0" Grid.ColumnSpan="3" Clicked="IndustrialButton_Clicked"/>
+                    <Image x:Name="IndustrialImage" Source="industrial.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="ResidentialButton" BackgroundColor="White" Style="{StaticResource HomeButtonStyle}" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2" FontSize="11" TextColor="#FF071D66" Grid.Column="0" Grid.ColumnSpan="3" Clicked="ResidentialButton_Clicked" />
+                    <Image x:Name="ResidentialImage" Source="residential.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="AgrecultureComButton" BackgroundColor="White"  BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2" FontSize="11" TextColor="#FF071D66" Grid.Column="0" Grid.ColumnSpan="3" Clicked="AgrecultureComButton_Clicked"/>
+                    <Image x:Name="AgreculturImage" Source="agriculturalLand.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="AreaLand" Grid.Column="0" FontSize="11" VerticalOptions="Center" TextColor="#FF071D66"/>
+                    <Grid Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" FontSize="10" VerticalOptions="Center" TextColor="#FF071D66" Text="1"/>
+                        <Image x:Name="area1u" Source="radio.png"  BackgroundColor="Transparent" Scale="0.6"  Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="area1unchecked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="area1c" Source="radioc.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit" IsVisible="False">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="area1checked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" FontSize="10" VerticalOptions="Center" TextColor="#FF071D66" Text="2"/>
+                        <Image x:Name="area2u" Source="radio.png"  BackgroundColor="Transparent" Scale="0.6"  Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="area2unchecked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="area2c" Source="radioc.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit" IsVisible="False">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="area2checked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid Grid.Column="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" FontSize="10" VerticalOptions="Center" TextColor="#FF071D66" Text="3"/>
+                        <Image x:Name="area3u" Source="radio.png"  BackgroundColor="Transparent" Scale="0.6"  Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="area3unchecked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="area3c" Source="radioc.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit" IsVisible="False">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="area3checked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid Grid.Column="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" FontSize="10" VerticalOptions="Center" TextColor="#FF071D66" Text="4"/>
+                        <Image x:Name="area4u" Source="radio.png"  BackgroundColor="Transparent" Scale="0.6"  Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="area4unchecked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="area4c" Source="radioc.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit" IsVisible="False">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="area4checked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid Grid.Column="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" FontSize="10" VerticalOptions="Center" TextColor="#FF071D66" Text="+5"/>
+                        <Image x:Name="area5u" Source="radio.png"  BackgroundColor="Transparent" Scale="0.6"  Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="area5unchecked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image x:Name="area5c" Source="radioc.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit" IsVisible="False">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="area5checked"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="15"/>
+                    </Grid.ColumnDefinitions>
+                    <range:RangeSlider x:Name="LandSlider" TextSize="10" MinimumValue="0" MaximumValue="1000000" LowerValue="0" UpperValue="1000000" ShowTextAboveThumbs="True" ActiveColor="#FF071D66"  StepValue="20" Grid.Column="1"  BarHeight="15" VerticalOptions="Start" HorizontalOptions="Center" TextColor="#FF071D66"/>
+
+                </Grid>
+            </Grid>
+            <!--end of land grid-->
+
+            <!--start of industrial grid-->
+            <Grid x:Name="industrialcat" Grid.Row="2" ColumnSpacing="4" RowSpacing="4" IsVisible="False">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <!--0-->
+                    <ColumnDefinition Width="*" />
+                    <!--1-->
+                    <ColumnDefinition Width="*" />
+                    <!--2-->
+                    <ColumnDefinition Width="10" />
+                    <!--3-->
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.2*"/>
+
+                    <!--1-->
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="HangerButton" BackgroundColor="White" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2" FontSize="11"  TextColor="#FF071D66" Grid.Column="0" Grid.ColumnSpan="3" Clicked="HangerButton_Clicked" />
+                    <Image x:Name="HangarImage" Source="hangar.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="BuildingIndButton"  BackgroundColor="White"  BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2" FontSize="11"  TextColor="#FF071D66"  Grid.Column="0" Grid.ColumnSpan="3" Clicked="BuildingIndButton_Clicked"/>
+                    <Image x:Name="BildingIndImage" Source="indbuilding.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="15"/>
+                    </Grid.ColumnDefinitions>
+                    <range:RangeSlider x:Name="IndustrialSlider" TextSize="10" MinimumValue="0" MaximumValue="1000000" LowerValue="0" UpperValue="1000000" ShowTextAboveThumbs="True" ActiveColor="#FF071D66"  StepValue="20" Grid.Column="1"  BarHeight="15" VerticalOptions="Start" HorizontalOptions="Center" TextColor="#FF071D66"/>
+                </Grid>
+            </Grid>
+            <!--end of industrial grid-->
+
+            <!--Start Apply Filters -->
+            <Button x:Name="ApplyFilter" Grid.Row="3" Style="{StaticResource ButtonStyle1}" Clicked="ApplyFilter_Clicked"/>
+            <!--End Apply Filters -->
+
+
+            <!--Start Nav Bar -->
+            <Grid Grid.Row="4" ColumnSpacing="11">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="11" />
+                    <!--0-->
+                    <ColumnDefinition Width="*" />
+                    <!--1-->
+                    <ColumnDefinition Width="*" />
+                    <!--2-->
+                    <ColumnDefinition Width="*" />
+                    <!--3-->
+                    <ColumnDefinition Width="*" />
+                    <!--4-->
+                    <ColumnDefinition Width="11" />
+                    <!--5-->
+                </Grid.ColumnDefinitions>
+
+
+                <BoxView BackgroundColor="Pink" Grid.Column="1" IsVisible="False"/>
+                <Image x:Name="HomeButton" Source="home2.png" Grid.Column="1" Scale=".7" IsVisible="False" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHomeButtonClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="HomeButtonBlue" Source="home1.png" Grid.Column="1" Scale=".7" IsVisible="True" />
+
+
+
+                <Image x:Name="SearchButton" Source="search1.png" Grid.Column="2" Scale=".7"  IsVisible="True" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSearchButtonClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="SearchButtonBlue" Source="search2.png" Grid.Column="2" Scale=".7" IsVisible="False"/>
+
+
+                <Image x:Name="FavoriteButton" Source="wishlist1.png" Grid.Column="3" Scale=".7"  IsVisible="True" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnFavoriteButtonClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="FavoriteButtonBlue" Source="wishlist2.png" Grid.Column="3" Scale=".7" IsVisible="False"/>
+
+
+                <Image x:Name="ProfileButton" Source="profile1.png" Grid.Column="4" Scale=".7"  IsVisible="True" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnProfileButtonClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="ProfileButtonBlue" Source="profile2.png" Grid.Column="4" Scale=".7" IsVisible="False" />
+
+
+            </Grid>
+            <!--End Nav Bar -->
+
+        </Grid>
+
+    </ContentPage.Content>
+
+</ContentPage>

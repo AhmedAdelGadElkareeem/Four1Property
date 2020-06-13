@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Four1Property.App">
+	<Application.Resources>
+        
+        <ResourceDictionary>
+            <Color x:Key="colorPrimary">#FF071D66</Color>
+            
+        </ResourceDictionary>
+
+        <ResourceDictionary>
+             
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#FF071D66"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontFamily" Value="MyriadPro"/>
+            </Style>
+
+            <Style x:Key="LabelStyle1" TargetType="Label">
+                <Setter Property="TextColor" Value="#FF283B7A"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="FontSize" Value="8"/>
+                <Setter Property="FontFamily" Value="MyriadPro"/>
+            </Style>
+
+            <Style x:Key="LabelStyle2" TargetType="Label">
+                <Setter Property="TextColor" Value="#FF071D66"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontFamily" Value="MyriadPro"/>
+            </Style>
+            <Style x:Key="MapLabelStyle2" TargetType="Label">
+                <Setter Property="TextColor" Value="#FF071D66"/>
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="FontFamily" Value="MyriadPro"/>
+            </Style>
+            
+            <Style x:Key="LabelStyle4" TargetType="Label">
+                <Setter Property="TextColor" Value="#696969"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontFamily" Value="MyriadPro"/>
+            </Style>
+
+            <Style x:Key="LabelStyle5" TargetType="Label">
+                <Setter Property="TextColor" Value="Gray"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontFamily" Value="MyriadPro"/>
+            </Style>
+
+            <Style x:Key="LabelStyle21" TargetType="Label">
+                <Setter Property="TextColor" Value="#868e96"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontFamily" Value="MyriadPro"/>
+            </Style>
+
+            <Style x:Key="LabelStyle3" TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontFamily" Value="MyriadPro"/>
+            </Style>
+            <Style x:Key="MapLabelStyle3" TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontFamily" Value="MyriadPro"/>
+            </Style>
+            <Style x:Key="IDLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#FF071D66"/>
+                <Setter Property="FontSize" Value="8"/>
+                <Setter Property="FontFamily" Value="MyriadPro"/>
+            </Style>
+
+            <Style x:Key="ImageStyle" TargetType="Image" >
+                <Setter Property="Scale" Value="1.1"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+
+            <Style x:Key="ImageStyle1" TargetType="Image" >
+                <Setter Property="VerticalOptions" Value="Fill"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+            </Style>
+
+            <Style x:Key="ImageStyle2" TargetType="Image" >
+                <Setter Property="Scale" Value="1.005"/>
+
+            </Style>
+
+            <Style x:Key="ImageStyle3" TargetType="Image" >
+                <Setter Property="Scale" Value="1"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="TextColor" Value="#FF071D66"/>
+                <Setter Property="BackgroundColor" Value="#ffffff"/>
+                <Setter Property="FontFamily" Value="MyriadPro"/>
+            </Style>
+
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="#FF071D66"/>
+                <Setter Property="VerticalOptions" Value="Fill"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="FontFamily" Value="MyriadPro"/>
+                <Setter Property="FontSize" Value="12"/>
+
+            </Style>
+
+            <Style x:Key="ButtonStyle1" TargetType="Button">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="#FF228AE6"/>
+                <Setter Property="VerticalOptions" Value="Fill"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="FontFamily" Value="MyriadPro"/>
+                <Setter Property="FontSize" Value="12"/>
+
+            </Style>
+            
+            <Style x:Key="ButtonStyle2" TargetType="Button">
+                <Setter Property="TextColor" Value="#FF228AE6"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="BorderColor" Value="#FF228AE6"/>
+                <Setter Property="VerticalOptions" Value="Fill"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="FontFamily" Value="MyriadPro"/>
+                <Setter Property="FontSize" Value="12"/>
+
+            </Style>
+            <Style x:Key="HomeButtonStyle" TargetType="Button">
+                <Setter Property="FontFamily" Value="MyriadPro"/>
+                <Setter Property="FontSize" Value="12"/>
+
+            </Style>
+           
+
+
+        </ResourceDictionary>
+        
+    </Application.Resources>
+</Application>

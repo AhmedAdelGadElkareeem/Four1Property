@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="View.Country">
+
+    <StackLayout Padding="20,20,20,20"
+                 BackgroundColor="#E6A9A9A9"
+                 WidthRequest="300"
+                 HeightRequest="400"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+        <Label x:Name="UpText" Text="Please Select Location" HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12"/>
+        <Label></Label>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Button x:Name="Jordan" Grid.Row="0" HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Jordan_Clicked" HeightRequest="40"/>
+                <Button x:Name="Iraq" Grid.Row="1"  Text="Iraq" HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="Iraq_Clicked"/>
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+
+</pages:PopupPage>

@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Four1Property.View.SearchFilter"
+             BackgroundColor="White">
+    <ContentPage.Content>
+
+        <Grid RowSpacing="5" ColumnSpacing="0">
+
+            <Grid.RowDefinitions >
+                <RowDefinition Height=".2*"/><!--0-->
+                <RowDefinition Height=".17*"/> <!--1--> 
+                <RowDefinition Height="2"/> <!--2-->            
+                <RowDefinition Height=".1*"/> <!--3-->             
+                <RowDefinition Height=".27*"/> <!--4-->             
+                <RowDefinition Height=".1*"/> <!--5-->            
+                <RowDefinition Height=".7*"/> <!--6-->
+                <RowDefinition Height=".1*"/> <!--7-->
+                <RowDefinition Height=".3*"/> <!--8-->
+                <RowDefinition Height=".2*"/> <!--9--> 
+            </Grid.RowDefinitions>
+
+            <BoxView BackgroundColor="DeepPink" Grid.Row="0" IsVisible="False"/>
+            <Grid Grid.Row="0"  ColumnSpacing="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".05*"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width=".05*"/>
+                </Grid.ColumnDefinitions>
+
+                <BoxView BackgroundColor="Gray" Grid.Row="0" Grid.Column="0" IsVisible="False"/>
+
+                <BoxView BackgroundColor="Green" Grid.Row="0" Grid.Column="1" IsVisible="False"/>
+                <Image x:Name="BackArrow" Source="@drawable/BackArrow" Scale=".3" Grid.Row="0" Grid.Column="1" />
+                    <!--Image fun not writen-->
+                <BoxView BackgroundColor="Red" Grid.Row="0" Grid.Column="2" IsVisible="False"/>
+                <Label Text="Create New Account" Style="{StaticResource LabelStyle}" Grid.Row="0" Grid.Column="2" />
+
+            </Grid>
+            <BoxView BackgroundColor="DeepPink" Grid.Row="1" IsVisible="False"/>
+            <Grid Grid.Row="1" ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4" /> <!--0-->
+                    <ColumnDefinition Width=".07*" /> <!--1-->
+                    <ColumnDefinition Width="*" /> <!--2-->
+                    <ColumnDefinition Width="4" /> <!--3-->
+                </Grid.ColumnDefinitions>
+
+                <Image x:Name="PinLocation" Source="@drawable/Pin_Location" Grid.Column="1" Scale=".6" VerticalOptions="CenterAndExpand"/>
+                <Entry x:Name="SearchForLocationHere" Placeholder=" Search for location here..." Grid.Column="2"/>
+            </Grid>
+
+
+            <BoxView BackgroundColor="LightBlue" Grid.Row="3" IsVisible="False"/>
+            <Grid Grid.Row="3" ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="12" /> <!--0-->
+                    <ColumnDefinition Width="*" /> <!--1-->
+                    <ColumnDefinition Width="12" /> <!--3-->
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="PROPERTYSTATUS" Text="PROPERTY STATUS"  Grid.Column="1" Style="{StaticResource LabelStyle1}" HorizontalOptions="StartAndExpand" />
+            </Grid>
+
+
+            <BoxView BackgroundColor="Chocolate" Grid.Row="4" IsVisible="False"/>
+            <Grid Grid.Row="4" ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40" /> <!--0-->
+                    <ColumnDefinition Width="*" /> <!--1-->
+                    <ColumnDefinition Width="*" /> <!--2-->
+                    <ColumnDefinition Width="40" /> <!--3-->
+                </Grid.ColumnDefinitions>
+
+                <BoxView BackgroundColor="Green" Grid.Column="1" IsVisible="False"/>
+                <BoxView BackgroundColor="Green" Grid.Column="2" IsVisible="False"/>
+
+                <Image x:Name="ForRent" Source="@drawable/ForRent" Grid.Column="1" Style="{StaticResource ImageStyle3}" IsVisible="True"  >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnForRentClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="ForRentBlue" Source="@drawable/ForRentBlue" Grid.Column="1"  Style="{StaticResource ImageStyle3}" IsVisible="False"/>
+
+                <Image x:Name="ForSale" Source="@drawable/ForSale" Grid.Column="2" Style="{StaticResource ImageStyle3}" IsVisible="True">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnForSaleClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="ForSaleBlue" Source="@drawable/ForSaleBlue" Grid.Column="2"   Style="{StaticResource ImageStyle3}" IsVisible="False" />
+
+            </Grid>
+
+            <BoxView BackgroundColor="Yellow" Grid.Row="5" IsVisible="False"/>
+            <Grid Grid.Row="5" ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="12" /> <!--0-->
+                    <ColumnDefinition Width="*" /> <!--1-->
+                    <ColumnDefinition Width="12" /> <!--3-->
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="SELECTCATEGORY" Text=" SELECT CATEGORY"  Grid.Column="1" Style="{StaticResource LabelStyle1}" HorizontalOptions="StartAndExpand" />
+            </Grid>
+
+
+            <BoxView BackgroundColor="Turquoise" Grid.Row="6" IsVisible="False"/>
+            
+            <Grid Grid.Row="6" ColumnSpacing="0" RowSpacing="6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="12" /> <!--0-->
+                    <ColumnDefinition Width="*" /> <!--1-->
+                    <ColumnDefinition Width="*" /> <!--2-->
+                    <ColumnDefinition Width="*" /> <!--3-->
+                    <ColumnDefinition Width="12" /> <!--4-->
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="*"/> <!--0-->           
+                    <RowDefinition Height="*"/> <!--1-->            
+                </Grid.RowDefinitions>
+
+                <Image x:Name="Land" Source="@drawable/Land"  Grid.Row="0" Grid.Column="1" Style="{StaticResource ImageStyle1}" IsVisible="True">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnLandClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="LandBlue" Source="@drawable/LandBlue"  Grid.Row="0" Grid.Column="1" Style="{StaticResource ImageStyle1}" IsVisible="False"/>
+
+
+                <Image x:Name="House" Source="@drawable/House"  Grid.Row="0" Grid.Column="2" Style="{StaticResource ImageStyle1}" IsVisible="True">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHouseClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="HouseBlue" Source="@drawable/HouseBlue"  Grid.Row="0" Grid.Column="2" Style="{StaticResource ImageStyle1}" IsVisible="False"/>
+
+
+                <Image x:Name="Apartment" Source="@drawable/Apartment" Grid.Row="0" Grid.Column="3" Style="{StaticResource ImageStyle1}" IsVisible="True">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnApartmentClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="ApartmentBlue" Source="@drawable/ApartmentBlue" Grid.Row="0" Grid.Column="3" Style="{StaticResource ImageStyle1}" IsVisible="False"/>
+
+
+
+                <Image x:Name="Building" Source="@drawable/Building"  Grid.Row="1" Grid.Column="1" Style="{StaticResource ImageStyle1}" IsVisible="True">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnBuildingClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="BuildingBlue" Source="@drawable/BuildingBlue"  Grid.Row="1" Grid.Column="1" Style="{StaticResource ImageStyle1}" IsVisible="False"/>
+
+
+                <Image x:Name="Office" Source="@drawable/Office"  Grid.Row="1" Grid.Column="2" Style="{StaticResource ImageStyle1}" IsVisible="True">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOfficeClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="OfficeBlue" Source="@drawable/OfficeBlue"  Grid.Row="1" Grid.Column="2" Style="{StaticResource ImageStyle1}" IsVisible="False"/>
+
+                <Image x:Name="Commercial" Source="@drawable/Commercial" Grid.Row="1" Grid.Column="3"  Style="{StaticResource ImageStyle1}" IsVisible="True">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCommercialClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="CommercialBlue" Source="@drawable/CommercialBlue" Grid.Row="1" Grid.Column="3"  Style="{StaticResource ImageStyle1}" IsVisible="False"/>
+
+            </Grid>
+
+            <BoxView BackgroundColor="Turquoise" Grid.Row="7" IsVisible="False"/>
+            <Grid Grid.Row="7" ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="12" /> <!--0-->
+                    <ColumnDefinition Width="*" /> <!--1-->
+                    <ColumnDefinition Width="12" /> <!--3-->
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="PRICERANGE" Text=" PRICE RANGE"  Grid.Column="1" Style="{StaticResource LabelStyle1}" HorizontalOptions="StartAndExpand" />
+                <!-- price range not tow way selection enabled-->
+            </Grid>
+            
+            <BoxView BackgroundColor="Turquoise" Grid.Row="8" IsVisible="False"/>
+            <Slider Maximum="360" Grid.Row="8"/>
+
+            <BoxView BackgroundColor="Turquoise" Grid.Row="9" IsVisible="False"/>
+            <Button x:Name="ApplyFilter" Text="Apply Filter" Grid.Row="9"  Style="{StaticResource ButtonStyle1}"/>
+
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

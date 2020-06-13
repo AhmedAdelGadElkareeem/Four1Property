@@ -1,0 +1,9 @@
+<!--<ListView x:Name="AcquaintanceList" RowHeight="100">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                        <Image Source="{Binding Image}"></Image>
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->

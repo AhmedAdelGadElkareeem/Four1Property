@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Four1Property.View.Login"
+             BackgroundImage="Splashbackground.png">
+
+    <ContentPage.Content>
+
+        <Grid  RowSpacing="8" ColumnSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".5*"/>
+                <!--0-->
+                <RowDefinition Height="2.5*"/>
+                <!--1-->
+                <RowDefinition Height="30"/>
+                <!--2-->
+                <RowDefinition Height="2*"/>
+                <!--3-->
+                <RowDefinition Height="10"/>
+                <!--4-->
+                <RowDefinition Height="30"/>
+                <!--5-->
+                <RowDefinition Height="*"/>
+                <!--6-->
+                <RowDefinition Height=".5*"/>
+                <!--7-->
+                <RowDefinition Height="70"/>
+                <!--8-->
+            </Grid.RowDefinitions>
+
+
+            <Image x:Name="logo" Source="logo.png" Grid.Row="1" VerticalOptions="Center"/>
+
+
+            <Grid Grid.Row="3" RowSpacing="10" ColumnSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".5*"/>
+                    <RowDefinition Height=".5*"/>
+                    <RowDefinition Height="4"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label x:Name="UserName" Grid.Row="0" Text="Email" FontSize="11" TextColor="#FF071D66"/>
+                    <Entry x:Name="Email" Placeholder="Email"  Grid.Row="1"  Style="{StaticResource EntryStyle}"/>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label x:Name="PassWord" Grid.Row="0" Text="Password" FontSize="11" TextColor="#FF071D66"/>
+                    <Entry x:Name="Password" Placeholder="Password"  Grid.Row="1"  IsPassword="True" Style="{StaticResource EntryStyle}"/>
+                    <Image x:Name="ShowHide" Source="ShowPassword2.png" VerticalOptions="Center" HorizontalOptions="End" Grid.Row="1" Scale="0.5">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="5" ColumnSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".05*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width=".05*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="ForgetYourPassword" Text="Forget Your Password?" TextColor="#FF486C8F" HorizontalOptions="Start" Grid.Row="0" Grid.Column="1"/>
+
+            </Grid>
+
+
+
+            <Grid Grid.Row="6" ColumnSpacing="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".05*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width=".05*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="LoginButton" Text="Login" Style="{StaticResource ButtonStyle1}" Grid.Row="0" Grid.Column="1" Clicked="LoginButton_Clicked"/>
+                <Button x:Name="RegisterNow" Text="Register Now" Style="{StaticResource ButtonStyle}" BackgroundColor="#FF72C3FC" Clicked="RegisterNow_Clicked" Grid.Row="0" Grid.Column="2"/>
+            </Grid>
+
+
+
+            <Button x:Name="GUEST" Text="CONTINUE AS A GUEST" Grid.Row="8"  Clicked="GUEST_Clicked" Style="{StaticResource ButtonStyle}"/>
+
+
+        </Grid>
+
+
+    </ContentPage.Content>
+</ContentPage>

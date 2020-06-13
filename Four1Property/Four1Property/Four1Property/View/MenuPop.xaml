@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="View.MenuPop">
+    <StackLayout x:Name="SideLay"
+        Padding="20,20,20,20"
+        Margin="0,40,0,0"
+        BackgroundColor="#E6A9A9A9"
+        HeightRequest="300"
+        HorizontalOptions="End"
+        VerticalOptions="Start">
+        <Label x:Name="IDLable" Text="Hello" HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12"/>
+        <Label x:Name="IDEmail" Text="" HorizontalOptions="Center" TextColor="#FF071D66" FontSize="11"/>
+        <Button x:Name="LoginorRegister" Text="Login or Register" Grid.Row="3"  HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BackgroundColor="Transparent" WidthRequest="150"  HeightRequest="40" Clicked="LoginorRegister_Clicked"/>
+        <Button x:Name="Profile" Text="Profile" Grid.Row="3" HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BackgroundColor="Transparent" HeightRequest="40" Clicked="Profile_Clicked"/>
+        <Button x:Name="Wishlist" Text="Wishlist" Grid.Row="3" HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BackgroundColor="Transparent" WidthRequest="150"  HeightRequest="40" Clicked="Wishlist_Clicked"/>
+        <Button x:Name="Agents" Text="Search" Grid.Row="3" HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BackgroundColor="Transparent" WidthRequest="150"  HeightRequest="40" Clicked="Agents_Clicked"/>
+        <Button x:Name="About" Text="Search" Grid.Row="3" HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BackgroundColor="Transparent" WidthRequest="150"  HeightRequest="40" Clicked="About_Clicked"/>
+        <Button x:Name="LogOut" Text="Logout" Grid.Row="3" HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BackgroundColor="Transparent" WidthRequest="150"  HeightRequest="40" Clicked="LogOut_Clicked"/>
+    </StackLayout>
+</pages:PopupPage>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:local="clr-namespace:CustomRenderer"
+        xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+        x:Class="Four1Property.View.MapView">
+
+    <ContentPage.Content>
+
+        <Grid RowSpacing="0" BackgroundColor="#dedede">
+
+            <Grid.RowDefinitions >
+                <!--0-->
+                <!--1-->
+                <RowDefinition Height="*"/>
+                <!--2-->
+                <RowDefinition Height="160"/>
+                <!--3-->
+                <RowDefinition Height="40"/>
+                <!--4-->
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" RowSpacing="0" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <local:CustomMap WidthRequest="500" HeightRequest="500"
+                                     x:Name="MyMap" HasScrollEnabled="True" HasZoomEnabled="True" 
+                                     IsShowingUser="true"
+                                     MapType="Street" ></local:CustomMap>
+                </Grid>
+            </Grid>
+            <AbsoluteLayout Grid.Row="1" Grid.Column="0" x:Name="ListLayout">
+                <Label x:Name="NoProperty" TextColor="Black" FontSize="Medium" IsVisible="False" HorizontalOptions="Center" VerticalOptions="StartAndExpand" AbsoluteLayout.LayoutBounds="0, 0, 0, 0"
+                  AbsoluteLayout.LayoutFlags="All"/>
+            </AbsoluteLayout>
+            <Grid Grid.Row="2" ColumnSpacing="12" BackgroundColor="WhiteSmoke" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="12" />
+                    <!--0-->
+                    <ColumnDefinition Width="*" />
+                    <!--1-->
+                    <ColumnDefinition Width="*" />
+                    <!--2-->
+                    <ColumnDefinition Width="*" />
+                    <!--3-->
+                    <ColumnDefinition Width="*" />
+                    <!--4-->
+                    <ColumnDefinition Width="12" />
+                    <!--5-->
+                </Grid.ColumnDefinitions>
+
+
+                <Image x:Name="HomeButton" Source="home2.png" Grid.Column="1" Scale=".7" IsVisible="True" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHomeButtonClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="HomeButtonBlue" Source="home1.png" Grid.Column="1" Scale=".7" IsVisible="False" />
+
+
+
+                <Image x:Name="SearchButton" Source="search1.png" Grid.Column="2" Scale=".7"  IsVisible="True" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSearchButtonClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="SearchButtonBlue" Source="search2.png" Grid.Column="2" Scale=".7" IsVisible="False"/>
+
+
+                <Image x:Name="FavoriteButton" Source="wishlist1.png" Grid.Column="3" Scale=".7"  IsVisible="True" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnFavoriteButtonClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="FavoriteButtonBlue" Source="wishlist2.png" Grid.Column="3" Scale=".7" IsVisible="False"/>
+
+
+                <Image x:Name="ProfileButton" Source="profile1.png" Grid.Column="4" Scale=".7"  IsVisible="True" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnProfileButtonClicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="ProfileButtonBlue" Source="profile2.png" Grid.Column="4" Scale=".7" IsVisible="False" />
+
+
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

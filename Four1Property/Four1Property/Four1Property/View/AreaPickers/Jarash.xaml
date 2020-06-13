@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"     
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="View.Jarash">
+    <StackLayout Padding="20,20,20,20"
+                 BackgroundColor="#E6A9A9A9"
+                 WidthRequest="300"
+                 HeightRequest="350"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+        <Label x:Name="UpText" Text="Please Select City" HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12"/>
+
+        <ScrollView x:Name="JarashArea" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" x:Name="AbarahJAR" Text=" Abarah " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="AbarahJAR_Clicked"/>
+                <Button Grid.Row="1" x:Name="AlaymoonJAR" Text=" Alaymoon " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="AlaymoonJAR_Clicked"/>
+                <Button Grid.Row="2" x:Name="AmamahJAR" Text=" Amamah " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="AmamahJAR_Clicked"/>
+                <Button Grid.Row="3" x:Name="ArRyashiJAR" Text=" Ar-Ryashi " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="ArRyashiJAR_Clicked"/>
+                <Button Grid.Row="4" x:Name="AsfoorJAR" Text=" Asfoor " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="AsfoorJAR_Clicked"/>
+                <Button Grid.Row="5" x:Name="AshShakMfarrejJAR" Text=" Ash-Shak Mfarrej " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="AshShakMfarrejJAR_Clicked"/>
+                <Button Grid.Row="6" x:Name="BalielaJAR" Text=" Baliela " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="BalielaJAR_Clicked"/>
+                <Button Grid.Row="7" x:Name="BormaJAR" Text=" Borma " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="BormaJAR_Clicked"/>
+                <Button Grid.Row="8" x:Name="DeirElliyyatJAR" Text=" Deir Elliyyat " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="DeirElliyyatJAR_Clicked"/>
+                <Button Grid.Row="9" x:Name="DibbeenJAR" Text=" Dibbeen " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="DibbeenJAR_Clicked"/>
+                <Button Grid.Row="10" x:Name="EjbaratJAR" Text=" Ejbarat " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="EjbaratJAR_Clicked"/>
+                <Button Grid.Row="11" x:Name="EnabehJAR" Text=" Enabeh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="EnabehJAR_Clicked"/>
+                <Button Grid.Row="12" x:Name="FawaraJAR" Text=" Fawara " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="FawaraJAR_Clicked"/>
+                <Button Grid.Row="13" x:Name="FayhaMshairfehElWestaJAR" Text=" Fayha Mshairfeh El-Westa " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="FayhaMshairfehElWestaJAR_Clicked"/>
+                <Button Grid.Row="14" x:Name="HadadehJAR" Text=" Hadadeh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="HadadehJAR_Clicked"/>
+                <Button Grid.Row="15" x:Name="HamtaJAR" Text=" Hamta " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="HamtaJAR_Clicked"/>
+                <Button Grid.Row="16" x:Name="HasainiyyatJAR" Text=" Hasainiyyat " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="HasainiyyatJAR_Clicked"/>
+                <Button Grid.Row="17" x:Name="HazeahJAR" Text=" Hazeah " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="HazeahJAR_Clicked"/>
+                <Button Grid.Row="18" x:Name="HoonehJAR" Text=" Hooneh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="HoonehJAR_Clicked"/>
+                <Button Grid.Row="19" x:Name="JabbaJAR" Text=" Jabba " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="JabbaJAR_Clicked"/>
+                <Button Grid.Row="20" x:Name="JamlaJAR" Text=" Jamla " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="JamlaJAR_Clicked"/>
+                <Button Grid.Row="21" x:Name="JazzazehJAR" Text=" Jazzazeh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="JazzazehJAR_Clicked"/>
+                <Button Grid.Row="22" x:Name="JebbahJAR" Text=" Jebbah " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="JebbahJAR_Clicked"/>
+                <Button Grid.Row="23" x:Name="JerashJAR" Text=" Jerash " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="JerashJAR_Clicked"/>
+                <Button Grid.Row="24" x:Name="JerashCampJAR" Text=" Jerash Camp " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="JerashCampJAR_Clicked"/>
+                <Button Grid.Row="25" x:Name="JnaideyyehMshairfehSharqiyyehJAR" Text=" Jnaideyyeh Mshairfeh Sharqiyyeh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="JnaideyyehMshairfehSharqiyyehJAR_Clicked"/>
+                <Button Grid.Row="26" x:Name="KettehJAR" Text=" Ketteh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="KettehJAR_Clicked"/>
+                <Button Grid.Row="27" x:Name="KfairJAR" Text=" Kfair " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="KfairJAR_Clicked"/>
+                <Button Grid.Row="28" x:Name="KfarKhallJAR" Text=" Kfar Khall " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="KfarKhallJAR_Clicked"/>
+                <Button Grid.Row="29" x:Name="MajdalJAR" Text=" Majdal " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="MajdalJAR_Clicked"/>
+                <Button Grid.Row="30" x:Name="ManshtalFaisalJAR" Text=" Manshtal Faisal " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="ManshtalFaisalJAR_Clicked"/>
+                <Button Grid.Row="31" x:Name="MansorahKhshaibehJAR" Text=" Mansorah Khshaibeh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="MansorahKhshaibehJAR_Clicked"/>
+                <Button Grid.Row="32" x:Name="MastabahJAR" Text=" Mastabah " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="MastabahJAR_Clicked"/>
+                <Button Grid.Row="33" x:Name="MeqeblehJAR" Text=" Meqebleh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="MeqeblehJAR_Clicked"/>
+                <Button Grid.Row="34" x:Name="MersieJAR" Text=" Mersi'e " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="MersieJAR_Clicked"/>
+                <Button Grid.Row="35" x:Name="MshairfehGharbiyyehJAR" Text=" Mshairfeh Gharbiyyeh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="MshairfehGharbiyyehJAR_Clicked"/>
+                <Button Grid.Row="36" x:Name="NabiHoodJAR" Text=" Nabi Hood " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="NabiHoodJAR_Clicked"/>
+                <Button Grid.Row="37" x:Name="NahlehJAR" Text=" Nahleh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="NahlehJAR_Clicked"/>
+                <Button Grid.Row="38" x:Name="NajdehJAR" Text=" Najdeh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="NajdehJAR_Clicked"/>
+                <Button Grid.Row="39" x:Name="QafqafaJAR" Text=" Qafqafa " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="QafqafaJAR_Clicked"/>
+                <Button Grid.Row="40" x:Name="QraiaJAR" Text=" Qraia' " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="QraiaJAR_Clicked"/>
+                <Button Grid.Row="41" x:Name="RahmaniyyehJAR" Text=" Rahmaniyyeh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="RahmaniyyehJAR_Clicked"/>
+                <Button Grid.Row="42" x:Name="RaiehJAR" Text=" Raieh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="RaiehJAR_Clicked"/>
+                <Button Grid.Row="43" x:Name="RaimoonJAR" Text=" Raimoon " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="RaimoonJAR_Clicked"/>
+                <Button Grid.Row="44" x:Name="RashaydehJAR" Text=" Rashaydeh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="RashaydehJAR_Clicked"/>
+                <Button Grid.Row="45" x:Name="SakebJAR" Text=" Sakeb " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="SakebJAR_Clicked"/>
+                <Button Grid.Row="46" x:Name="SoofJAR" Text=" Soof " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="SoofJAR_Clicked"/>
+                <Button Grid.Row="47" x:Name="SoofCampJAR" Text=" Soof Camp " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="SoofCampJAR_Clicked"/>
+                <Button Grid.Row="48" x:Name="TaletErrozJAR" Text=" Tal'et Erroz " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="TaletErrozJAR_Clicked"/>
+                <Button Grid.Row="49" x:Name="UmmEzzaitoonJAR" Text=" Umm Ezzaitoon " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="UmmEzzaitoonJAR_Clicked"/>
+                <Button Grid.Row="50" x:Name="UmmQontarahJAR" Text=" Umm Qontarah " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="UmmQontarahJAR_Clicked"/>
+                <Button Grid.Row="51" x:Name="UmmRamehJAR" Text=" Umm Rameh " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="UmmRamehJAR_Clicked"/>
+                <Button Grid.Row="52" x:Name="ZaqreetJAR" Text=" Zaqreet " HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12" BorderColor="#FF071D66" BorderRadius="7" BorderWidth="2" BackgroundColor="White" WidthRequest="150" Clicked="ZaqreetJAR_Clicked"/>
+
+            </Grid>
+        </ScrollView>
+
+    </StackLayout>
+</pages:PopupPage>
