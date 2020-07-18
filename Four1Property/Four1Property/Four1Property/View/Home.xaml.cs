@@ -924,7 +924,6 @@ namespace Four1Property.View
 
             }
         }
-
         private void FlatButton_Clicked(object sender, EventArgs e)
         {
             if (FlatButton.BackgroundColor == Color.FromHex("#FF071D66"))
@@ -1014,7 +1013,6 @@ namespace Four1Property.View
 
             }
         }
-
         private void ApartmentButton_Clicked(object sender, EventArgs e)
         {
             if (ApartmentButton.BackgroundColor == Color.FromHex("#FF071D66"))
@@ -1101,7 +1099,6 @@ namespace Four1Property.View
 
             }
         }
-
         private void BuildingButton_Clicked(object sender, EventArgs e)
         {
             if (BuildingButton.BackgroundColor == Color.FromHex("#FF071D66"))
@@ -1190,7 +1187,6 @@ namespace Four1Property.View
 
             }
         }
-
         private void FurnishedButton_Clicked(object sender, EventArgs e)
         {
             if (FurnishedButton.BackgroundColor == Color.FromHex("#FF071D66"))
@@ -1216,7 +1212,6 @@ namespace Four1Property.View
                 UnFirnishedImage.Source = "unfirnished.png";
             }
         }
-
         private void UnFernishedButton_Clicked(object sender, EventArgs e)
         {
             if (UnFernishedButton.BackgroundColor == Color.FromHex("#FF071D66"))
@@ -1243,9 +1238,6 @@ namespace Four1Property.View
             }
         }
         //end of buttons residential code
-
-
-
         //start of buttons commercial code
         private void ShowRoomButton_Clicked(object sender, EventArgs e)
         {
@@ -1297,7 +1289,6 @@ namespace Four1Property.View
 
             }
         }
-
         private void OfficeButton_Clicked(object sender, EventArgs e)
         {
             if (OfficeButton.BackgroundColor == Color.FromHex("#FF071D66"))
@@ -1349,7 +1340,6 @@ namespace Four1Property.View
 
             }
         }
-
         private void ShopsButton_Clicked(object sender, EventArgs e)
         {
             if (ShopsButton.BackgroundColor == Color.FromHex("#FF071D66"))
@@ -1400,7 +1390,6 @@ namespace Four1Property.View
 
             }
         }
-
         private void BuildingComButton_Clicked(object sender, EventArgs e)
         {
             if (BuildingComButton.BackgroundColor == Color.FromHex("#FF071D66"))
@@ -1453,9 +1442,6 @@ namespace Four1Property.View
             }
         }
         // end of commercial buttom code
-
-
-
         // start of Land buttom code
         private void CommercialButton_Clicked(object sender, EventArgs e)
         {
@@ -1509,7 +1495,6 @@ namespace Four1Property.View
 
             }
         }
-
         private void IndustrialButton_Clicked(object sender, EventArgs e)
         {
             if (IndustrialButton.BackgroundColor == Color.FromHex("#FF071D66"))
@@ -1561,7 +1546,6 @@ namespace Four1Property.View
 
             }
         }
-
         private void ResidentialButton_Clicked(object sender, EventArgs e)
         {
             if (ResidentialButton.BackgroundColor == Color.FromHex("#FF071D66"))
@@ -1612,7 +1596,6 @@ namespace Four1Property.View
 
             }
         }
-
         private void AgrecultureComButton_Clicked(object sender, EventArgs e)
         {
             if (AgrecultureComButton.BackgroundColor == Color.FromHex("#FF071D66"))
@@ -1665,8 +1648,6 @@ namespace Four1Property.View
             }
         }
         //end of Land buttons code
-
-
         //start of industrial buttons code
         private void HangerButton_Clicked(object sender, EventArgs e)
         {
@@ -1700,7 +1681,6 @@ namespace Four1Property.View
 
             }
         }
-
         private void BuildingIndButton_Clicked(object sender, EventArgs e)
         {
             if (BuildingIndButton.BackgroundColor == Color.FromHex("#FF071D66"))
@@ -1735,8 +1715,6 @@ namespace Four1Property.View
             }
         }
         //end of industrial buttons code
-
-
         // Apply Button
         async private void ApplyFilter_Clicked(object sender, EventArgs e)
         {
@@ -1752,7 +1730,8 @@ namespace Four1Property.View
                         Constantce.homeModelC = homeModel;
                         ObservableCollection<Property> property = new ObservableCollection<Property>();
                         ObservableCollection<Ad> ads = new ObservableCollection<Ad>();
-                        var uri = string.Format(Constantce.URL + "/api/properties/" + Constantce.APIName + "?fort={0}&category={1}&Subcat={2}&lon={3}&lat={4}&id={5}&bed={6}&bath={7}", homeModel.SaleOrRent, homeModel.Category, homeModel.SubCategory, Longt, Latt, pid, Constantce.Bed, Constantce.Bath);
+                        var uri = string.Format(Constantce.URL + "/api/properties/" + Constantce.APIName + "?fort={0}&category={1}&Subcat={2}&lon={3}&lat={4}&id={5}&bed={6}&bath={7}",
+                            homeModel.SaleOrRent, homeModel.Category, homeModel.SubCategory, Longt, Latt, pid, Constantce.Bed, Constantce.Bath);
                         HttpWebRequest request = WebRequest.Create(uri) as HttpWebRequest;
                         using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                         {
@@ -1813,8 +1792,6 @@ namespace Four1Property.View
             }
         }
         //End Apply Button
-
-
         // Nav Bar Start
         void OnHomeButtonClicked(object sender, EventArgs e)
         {

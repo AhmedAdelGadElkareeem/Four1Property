@@ -51,7 +51,7 @@ namespace Four1Property.Droid
             
             LoadApplication(new App());
             RequestPermissions(Permissions, RequestID);
-            ZXing.Net.Mobile.Forms.Android.Platform.Init();
+            //ZXing.Net.Mobile.Forms.Android.Platform.Init();
             UserDialogs.Init(this);
             MessagingCenter.Subscribe<Compare>(this, "preventLandScape", sender =>
             {
@@ -97,7 +97,7 @@ namespace Four1Property.Droid
              Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
              PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
              PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-             ZXing.Net.Mobile.Forms.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+             //ZXing.Net.Mobile.Forms.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
              base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 

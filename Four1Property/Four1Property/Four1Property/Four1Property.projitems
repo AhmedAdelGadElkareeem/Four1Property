@@ -57,10 +57,6 @@
       <DependentUpon>AcquaintanceList.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)View\Agents - Copy.xaml.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>Agents.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\Agents.xaml.cs">
       <DependentUpon>Agents.xaml</DependentUpon>
       <SubType>Code</SubType>

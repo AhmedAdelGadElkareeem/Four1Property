@@ -20982,7 +20982,6 @@ namespace Four1Property.Droid
 			global::XLabs.Forms.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::Four1Property.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 			global::XLabs.Platform.Resource.String.ApplicationName = global::Four1Property.Droid.Resource.String.ApplicationName;
 			global::XLabs.Platform.Resource.String.Hello = global::Four1Property.Droid.Resource.String.Hello;
-			global::ZXing.Net.Mobile.Forms.Android.Resource.String.library_name = global::Four1Property.Droid.Resource.String.library_name;
 		}
 		
 		public partial class Animation
